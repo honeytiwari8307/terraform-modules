@@ -1,5 +1,17 @@
 terraform {
   required_providers {
-    azurermggit 
+    azurerm = {
+        source = "hashicorp/azurerm"
+        version = "4.80.0"
+    }
   }
 }
+
+provider "azurerm" {
+    features {}
+  
+}
+resource "azurerm_resource_group" "rgg" {
+    name = "HONEYNA12345"
+    location = "central india"
+  }
